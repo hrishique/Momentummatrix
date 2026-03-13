@@ -34,20 +34,26 @@ export default function CTA() {
             Book a free 30-minute strategy call. We'll audit your current site and show you exactly how to double your leads.
           </motion.p>
           <div className="flex flex-col sm:flex-row gap-4 w-full sm:w-auto">
-            <motion.button 
+            <motion.a 
+              href="https://wa.me/+918853299951"
+              target="_blank"
+              rel="noopener noreferrer"
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
-              className="bg-brand-primary text-white px-12 py-6 rounded-2xl font-bold text-xl hover:bg-violet-600 transition-all shadow-2xl shadow-violet-500/40"
+              className="bg-brand-primary text-white px-12 py-6 rounded-2xl font-bold text-xl hover:bg-violet-600 transition-all shadow-2xl shadow-violet-500/40 inline-flex items-center justify-center"
             >
               Book Free Consultation
-            </motion.button>
-            <motion.button 
+            </motion.a>
+            <motion.a 
+              href="https://wa.me/+918853299951"
+              target="_blank"
+              rel="noopener noreferrer"
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
               className="bg-white/10 backdrop-blur-md text-white border border-white/10 px-12 py-6 rounded-2xl font-bold text-xl hover:bg-white/20 transition-all flex items-center justify-center gap-3"
             >
               <Phone size={24} /> WhatsApp Us
-            </motion.button>
+            </motion.a>
           </div>
           <p className="mt-8 text-slate-500 text-sm font-medium">
             No commitment required. Just pure value.

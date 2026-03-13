@@ -1,8 +1,11 @@
 import React, { Suspense, lazy, useEffect } from "react";
 import { motion, AnimatePresence, useScroll, useSpring } from "motion/react";
-import { 
-  ArrowRight, 
+import {
+  ArrowRight,
+  Zap,
+  Code2,
   Rocket,
+  MessageCircle,
   Phone
 } from "lucide-react";
 import Navbar from "./components/Navbar";
@@ -58,7 +61,7 @@ export default function App() {
       <section className="relative pt-28 pb-16 md:pt-48 md:pb-32 overflow-hidden">
         {/* Interactive Mouse Glow (Desktop Only) */}
         <div className="hidden md:block absolute inset-0 z-0 pointer-events-none overflow-hidden">
-          <motion.div 
+          <motion.div
             className="absolute w-[800px] h-[800px] bg-brand-primary/5 blur-[150px] rounded-full"
             animate={{
               x: "var(--mouse-x)",
@@ -88,45 +91,45 @@ export default function App() {
               <span className="w-2 h-2 rounded-full bg-emerald-500 animate-pulse" />
               The Future of Web Development
             </motion.div>
-            
+
             <motion.h1
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
-              transition={{ 
-                duration: 1, 
-                ease: [0.16, 1, 0.3, 1] 
+              transition={{
+                duration: 1,
+                ease: [0.16, 1, 0.3, 1]
               }}
               className="text-4xl md:text-7xl lg:text-8xl font-bold text-brand-dark leading-[1.1] mb-8 max-w-5xl"
             >
               Websites That <span className="text-gradient">Dominate</span> Your Market.
             </motion.h1>
-            
+
             <motion.p
               initial={{ opacity: 0, y: 10 }}
               animate={{ opacity: 1, y: 0 }}
-              transition={{ 
-                delay: 0.2, 
-                duration: 1, 
-                ease: [0.16, 1, 0.3, 1] 
+              transition={{
+                delay: 0.2,
+                duration: 1,
+                ease: [0.16, 1, 0.3, 1]
               }}
               className="text-lg md:text-2xl text-slate-600 mb-12 max-w-2xl leading-relaxed"
             >
               We don't just build websites. We build high-performance digital assets that turn visitors into loyal customers.
             </motion.p>
-            
+
             <motion.div
               initial={{ opacity: 0, y: 10 }}
               animate={{ opacity: 1, y: 0 }}
-              transition={{ 
-                delay: 0.4, 
-                duration: 1, 
-                ease: [0.16, 1, 0.3, 1] 
+              transition={{
+                delay: 0.4,
+                duration: 1,
+                ease: [0.16, 1, 0.3, 1]
               }}
               className="flex flex-col sm:flex-row gap-4 w-full sm:w-auto"
             >
               <motion.a
                 href="#contact"
-                whileHover={{ 
+                whileHover={{
                   scale: 1.05,
                   y: -2,
                   boxShadow: "0 25px 50px -12px rgba(124, 58, 237, 0.4)"
@@ -137,7 +140,7 @@ export default function App() {
                 <span className="relative z-10 flex items-center gap-3">
                   Get Free Strategy <ArrowRight className="group-hover:translate-x-1 transition-transform duration-300" />
                 </span>
-                <motion.div 
+                <motion.div
                   className="absolute inset-0 bg-gradient-to-r from-transparent via-white/10 to-transparent -translate-x-full"
                   animate={{ translateX: ["100%", "-100%"] }}
                   transition={{ duration: 3, repeat: Infinity, ease: "linear" }}
@@ -145,7 +148,7 @@ export default function App() {
               </motion.a>
               <motion.a
                 href="#portfolio"
-                whileHover={{ 
+                whileHover={{
                   scale: 1.05,
                   y: -2,
                   backgroundColor: "rgba(248, 250, 252, 1)",
@@ -166,9 +169,9 @@ export default function App() {
             className="relative max-w-5xl mx-auto perspective-1000"
           >
             <div className="relative z-10 rounded-[2.5rem] overflow-hidden shadow-[0_40px_100px_-20px_rgba(0,0,0,0.2)] border border-white/20 animate-float">
-              <img 
-                src="https://picsum.photos/seed/agency-hero-v2/1200/750" 
-                alt="Momentumatrixx Dashboard" 
+              <img
+                src="/images/hero-premium.png"
+                alt="Momentumatrixx Dashboard"
                 className="w-full h-auto"
                 fetchPriority="high"
                 referrerPolicy="no-referrer"
@@ -186,8 +189,8 @@ export default function App() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-2 md:grid-cols-3 gap-8 md:gap-12">
             {stats.map((stat, i) => (
-              <motion.div 
-                key={i} 
+              <motion.div
+                key={i}
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
@@ -250,11 +253,11 @@ export default function App() {
               <ul className="space-y-6">
                 <li className="flex flex-col">
                   <span className="text-xs font-bold text-slate-400 uppercase tracking-widest mb-1">Email</span>
-                  <a href="mailto:hello@momentumatrixx.com" className="text-brand-dark font-bold hover:text-brand-primary transition-colors">hello@momentumatrixx.com</a>
+                  <a href="mailto:momentumatrixx@outlook.com" className="text-brand-dark font-bold hover:text-brand-primary transition-colors">momentumatrixx@outlook.com</a>
                 </li>
                 <li className="flex flex-col">
                   <span className="text-xs font-bold text-slate-400 uppercase tracking-widest mb-1">Phone</span>
-                  <a href="tel:+15551234567" className="text-brand-dark font-bold hover:text-brand-primary transition-colors">+1 (555) 123-4567</a>
+                  <a href="tel:+918853299951" className="text-brand-dark font-bold hover:text-brand-primary transition-colors">+91 8853299951</a>
                 </li>
               </ul>
             </div>
@@ -271,7 +274,7 @@ export default function App() {
 
       {/* Floating WhatsApp - Enhanced */}
       <motion.a
-        href="https://wa.me/1234567890"
+        href="https://wa.me/+918853299951"
         target="_blank"
         rel="noopener noreferrer"
         initial={{ scale: 0, y: 20 }}
@@ -279,7 +282,7 @@ export default function App() {
         whileHover={{ scale: 1.1, rotate: 5 }}
         className="fixed bottom-6 right-6 w-16 h-16 bg-emerald-500 text-white rounded-2xl shadow-2xl shadow-emerald-500/40 flex items-center justify-center z-50 cursor-pointer"
       >
-        <Phone size={28} fill="currentColor" />
+        <MessageCircle size={32} fill="currentColor" />
       </motion.a>
     </div>
   );

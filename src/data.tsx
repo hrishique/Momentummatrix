@@ -20,7 +20,7 @@ export const bentoServices = [
     description: "Bespoke interfaces that don't just look good, but feel intuitive.",
     icon: <Layout className="w-6 h-6" />,
     className: "md:col-span-2 md:row-span-2 bg-violet-50/50",
-    image: "https://picsum.photos/seed/design-bento/600/400"
+    image: "/images/service-uiux.png"
   },
   {
     title: "SEO Mastery",
@@ -55,28 +55,28 @@ export const portfolio = [
     title: "Urban Eats",
     industry: "Restaurant",
     result: "300% increase in online reservations.",
-    image: "https://picsum.photos/seed/restaurant/800/600",
+    image: "/images/portfolio-restaurant.png",
     tags: ["UI/UX", "Booking System"]
   },
   {
     title: "Skyline Realty",
     industry: "Real Estate",
     result: "50+ high-quality leads in month one.",
-    image: "https://picsum.photos/seed/realestate/800/600",
+    image: "/images/portfolio-realestate.png",
     tags: ["SEO", "Lead Gen"]
   },
   {
     title: "Zenith Coaching",
     industry: "Education",
     result: "Admin work reduced by 40%.",
-    image: "https://picsum.photos/seed/coaching/800/600",
+    image: "/images/portfolio-education.png",
     tags: ["Automation", "Web App"]
   },
   {
     title: "HealthFlow Clinic",
     industry: "Healthcare",
     result: "2x more mobile appointments.",
-    image: "https://picsum.photos/seed/clinic/800/600",
+    image: "/images/portfolio-healthcare.png",
     tags: ["Mobile First", "HIPAA"]
   },
 ];
@@ -110,21 +110,21 @@ export const processSteps = [
 
 export const testimonials = [
   {
-    name: "Sarah Johnson",
+    name: "Ananya Sharma",
     role: "Owner, Urban Eats",
     content: "This agency built our website and we started getting inquiries immediately. The design is stunning and so easy to use.",
-    image: "https://i.pravatar.cc/150?u=sarah",
+    image: "/images/testimonial-ananya.png",
   },
   {
-    name: "Michael Chen",
+    name: "Vikram Malhotra",
     role: "Founder, TechStart",
     content: "Professional, fast, and results-oriented. They understood our vision perfectly and delivered a site that exceeds expectations.",
-    image: "https://i.pravatar.cc/150?u=michael",
+    image: "/images/vikram_malhotra_profile_1773439775384.png",
   },
   {
-    name: "Elena Rodriguez",
+    name: "Priya Iyer",
     role: "Director, HealthFlow",
     content: "Our patient bookings have doubled since the new site launched. The mobile optimization was a game-changer for us.",
-    image: "https://i.pravatar.cc/150?u=elena",
+    image: "/images/priya_iyer_profile_1773439788787.png",
   },
 ];
